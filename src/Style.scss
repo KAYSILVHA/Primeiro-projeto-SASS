@@ -1,0 +1,39 @@
+$cor-do-header: red;
+$cor-fonte: white;
+
+@mixin alinhamento {
+  display: flex;
+  height: 100%;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: $cor-do-header;
+  color: $cor-fonte;
+  width: 100vw;
+  height: 12vh;
+
+  nav {
+    @include alinhamento;
+
+    ul {
+      width: 50vw;
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      align-items: center;
+
+      li:hover{
+        color: black;
+      }
+    }
+  }
+}
